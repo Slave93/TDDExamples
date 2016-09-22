@@ -1,14 +1,16 @@
-package rs.slavko.examples.tdd;
+package rs.slavko.examples.tdd.workers.flexiblepasswordvalidator;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+
+import static org.mockito.Mockito.*;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-import rs.slavko.examples.tdd.FlexiblePasswordValidator;
 
 /*
  * This class and its SUT is made using TDD(test-first) approach.
@@ -31,6 +33,8 @@ public class FlexiblePasswordValidatorTest {
 	private static final String PASSWORD_NULL = null;
 	private static final int MIN_PASSWORD_LENGTH = 10;
 	private static final int NO_MIN_PASSWORD_LENGTH = 0;
+	
+	String mock = "aaa";
 	
 	FlexiblePasswordValidator passwordValidatorDefault;
 	FlexiblePasswordValidator passwordValidatorNoConstraints;	
@@ -57,15 +61,25 @@ public class FlexiblePasswordValidatorTest {
 	
 	
 	@Test
-	public void constructorTest(){
+	public void constructorTest(){		
 		assertEquals(FlexiblePasswordValidator.DEFAULT_MIN_PASSWORD_LENGTH,passwordValidatorDefault.getMinPasswordLength());
 		assertEquals(FlexiblePasswordValidator.DEFAULT_MANDATORY_SPECIAL_SIGN, passwordValidatorDefault.getMandatorySpecialSign());
 		assertEquals(FlexiblePasswordValidator.DEFAULT_MANDATORY_UPPERCASE,passwordValidatorDefault.getMandatoryUppercase());
 	}
 	
 	@Test
+	public void whenTest(){
+		FlexiblePasswordValidator flexiblePasswordValidator = Mockito.mock(FlexiblePasswordValidator.class);
+		flexiblePasswordValidator.getMinPasswordLength();
+		when(13131313).thenReturn(10);
+		assertEquals(10, flexiblePasswordValidator.getMinPasswordLength());
+		
+	}
+	
+	@Test
 	@Parameters(method="getMinPasswordLengths")
 	public void setMinPasswordLengthTest(int passwordLength){
+		
 		passwordValidatorDefault.setMinPasswordLength(passwordLength);
 		assertEquals(passwordLength, passwordValidatorDefault.getMinPasswordLength());
 	}

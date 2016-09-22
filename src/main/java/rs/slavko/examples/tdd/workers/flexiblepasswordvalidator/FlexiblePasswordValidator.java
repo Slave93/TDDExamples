@@ -1,4 +1,4 @@
-package rs.slavko.examples.tdd;
+package rs.slavko.examples.tdd.workers.flexiblepasswordvalidator;
 
 public class FlexiblePasswordValidator {
 
