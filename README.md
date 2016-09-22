@@ -11,11 +11,11 @@ placed in package rs.slavko.examples.tdd.workers.
 # FlexiblePasswordValidator
 This class and its test class (FlexiblePasswordValidatorTest) represents a<br/>
 good example of how important a <b>MINIMAL API</b> design is. Even after more<br/>
-than 30 tests, more use cases remained untested:
-  passwordValidatorMinLengthSpecialSign
-  passwordValidatorMinLengthUppercase
-  passwordValidatorSpecialSignUppsercase
-  passwordValidatorMinLengthSpecialSignUppercase
+than 30 tests, more use cases remained untested:<br/>
+  passwordValidatorMinLengthSpecialSign<br/>
+  passwordValidatorMinLengthUppercase<br/>
+  passwordValidatorSpecialSignUppsercase<br/>
+  passwordValidatorMinLengthSpecialSignUppercase<br/>
 This shows that writing test for mutable classes is much harder, because many cases needs to be covered.
 This being sad, API should be designed carefully with testability in mind even if
 it is easy to implement. Just like in the case of FlexiblePasswordValidator. 
