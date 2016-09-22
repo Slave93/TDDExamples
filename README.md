@@ -26,4 +26,5 @@ via some factory method. It would be probably more then enough, and will be much
 # MANAGERS:
 ## MessageRouter
 Simple example of a class thet is pure MANAGER, and does not do "real work". It just takes message, and disptatch
-message body to appropriate dispatcher based on message type.
+message body to appropriate dispatcher based on message type. This is a good example of how test can be written for a 
+manager class(MessageRouter) wihtout even implementing it's collaborators(DOCs) by coding to an interface.
