@@ -24,6 +24,6 @@ is probably an overhead. It would be better to make just a couple of configurati
 via some factory method. It would be probably more then enough, and will be much easier to write and MAINTAIN tests.
 
 # MANAGERS:
-## Message router
+## MessageRouter
 Simple example of a class thet is pure MANAGER, and does not do "real work". It just takes message, and disptatch
 message body to appropriate dispatcher based on message type.
