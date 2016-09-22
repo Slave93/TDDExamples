@@ -7,8 +7,8 @@ mocking is not necessary, and state testing can be used without behavior testing
 business logic and "do real work" usually have more use cases and more tests. Examples of testing worker classes are
 placed in package rs.slavko.examples.tdd.workers.
 
-## WORKERS:
-# FlexiblePasswordValidator
+# WORKERS:
+## FlexiblePasswordValidator
 This class and its test class (FlexiblePasswordValidatorTest) represents a<br/>
 good example of how important a <b>MINIMAL API</b> design is. Even after more<br/>
 than 30 tests, more use cases remained untested:<br/>
@@ -23,7 +23,7 @@ In this case this much flexibility(configurable minLength, mandatoryUppercase, m
 is probably an overhead. It would be better to make just a couple of configurations(ex. weak,medium,hard passwordWalidator)
 via some factory method. It would be probably more then enough, and will be much easier to write and MAINTAIN tests.
 
-## MANAGERS:
-# Message router
+# MANAGERS:
+## Message router
 Simple example of a class thet is pure MANAGER, and does not do "real work". It just takes message, and disptatch
 message body to appropriate dispatcher based on message type.
