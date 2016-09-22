@@ -1,4 +1,4 @@
-# TDExamples
+# TDDExamples
 Repository with examples made while practicing TDD(tests-first) approach.
 Examples placed in rs.slavko.examples.tdd.menagers are examples of testing "manager" classes that
 has no or little business logic, and mainly dispatche messages between other classes, that can be managers too
